@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    services:
+      registrationMethod: route
+
+security:
+  basic:
+    enabled: false
+    
+zuul:
+   prefix: /zuultest
+   routes:
+    multimime: 
+      path: /cust/**
+      serviceId: CUSTADDSERVICE    
